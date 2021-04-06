@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>BasketBall - legends of game</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <!-- <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="css/new-age.css" rel="stylesheet"> -->
+  <link href="css/charts.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="section-heading text-center">
+          <h2>Discover who perform better!</h2>
+          <p>Player stats</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 my-auto">
+              <div class="badge-link" id="chart1" ></div>
+            <button type="button" class="btn btn-outline-primary btn-sm" onclick="drawScatter('FG')">Field Goals</button>
+            <button type="button" class="btn btn-outline-primary btn-sm" onclick="drawScatter('3P')">Three Points Goals</button>
+            <button type="button" class="btn btn-outline-primary btn-sm" onclick="drawScatter('2P')">Two Points Goals</button>
+        </div>
+
+        <div class="col-lg-6 my-auto">
+            <div >
+              <div  id="chart2" ></div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+      <div class="section-heading text-center">
+        <h2> Categorize Players </h2>
+        <p class="text-muted">Players Categories!</p>
+        <hr>
+      </div>
+     
+      <div class="row">
+        <div class="col-lg-12 my-auto">
+              <iframe src="pages/bubble.html" height="600px" width="1150" scrolling="no"  style="overflow: hidden; border: none;" ></iframe>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="section-heading text-center">
+          <h2>Players Goals!</h2>
+          <p>Players Goals</p>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-lg-12 my-auto">
+            <div >
+              <iframe src="pages/groupedbar.html" height="600px" width="1150" scrolling="no"  style="overflow: hidden; border: none;" ></iframe>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section-heading text-center">
+      <h2> Visualizing Basketball Data </h2>
+      <p class="text-muted">Goal & Source</p>
+      <hr>
+    </div>
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-12 my-auto">
+          <span class="badge-link" style="margin: auto;">I have used NBA player data from "basketball-reference" to generate visualizations that 
+            analyzes NBA players' stats. In this task, I have used wide variety of visualizations, such as ScatterPlot, Donut Chart, Bubble Chart, and grouped/stacked charts.
+            In the visualizations, field goals of players and player categories such as their age, teams and positions can be seen.The data is taken from
+             <a href="https://www.basketball-reference.com/leagues/NBA_2020_totals.html">NBA DATA</a>  
+            </span>
+    </div>
+  </div>
+   </div>
+
+
+
+  <!-- D3 Js Refrence -->
+  <script src="vendor/d3.min.js"></script>
+  <!-- D3 Custom Chart -->
+  <script src="d3Charts/scatterPlot.js"></script>
+  <script src="d3Charts/dounut.js"></script>
+
+
+
+</body>
+<script>
+ drawScaterChart(500,440,"FG");
+
+ function drawScatter(Xlabel)
+ {
+   d3.select("#chart1").html("");
+   drawScaterChart(500,440,Xlabel);
+ }
+</script>
+    
+</html>
