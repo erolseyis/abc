@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BasketBall</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style.css">
+<style>
+  .axis {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+</style>
+<script src="../vendor/d3.min.js"></script>
+</head>
+<body>
+    
+    <div class="row">
+        <div class="col-sm-12" style="width: auto; margin-top: 10px;">
+          <div style="margin-left: 0px; width: 1000px; margin: auto;">
+            <div id="outer">
+             <div class="stacked-chart-container js-stacked-chart-container">
+              <form class="controls">
+                <label><input type="radio" name="mode" value="G" checked>Goals</label>
+                  <label><input type="radio" name="mode" value="FG">Field Goals</label>
+                  <label><input type="radio" name="mode" value="FGA">Field Goals Attempt</label>
+                  <label><input type="radio" name="mode" value="STL" >Steal</label>
+                  <label><input type="radio" name="mode" value="BLK">Block</label>
+                  
+
+              </form>
+              <div class="schart"></div>
+              <div class="tooltip js-tooltip">
+                  <div class="tooltip-wrapper">
+                      <table class="tooltip-table js-tooltip-table"></table>
+                  </div>
+              </div>
+          </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+     <script src="groupedbar.js"></script>
+     
+      
+</body>
+</html>
